@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #585858;
+  color: wheat;
+}
+
+#root {
+  display: flex;
+}
+
+.name {
+  background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-container {
+  @apply grid p-5;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.input-img {
+  @apply h-6 cursor-pointer;
+}
+
+.card {
+  @apply h-[200px] rounded-2xl p-4 text-[#585858] text-[14px] font-medium bg-[#f0f4f9] relative cursor-pointer hover:bg-[#dfe4ea];
+}
+
+.card-img {
+  @apply h-7 bg-white rounded-2xl absolute right-5 bottom-5;
+}
+
+.entry {
+  @apply text-[14px] inline-flex  cursor-pointer rounded-full items-center gap-2.5 text-gray-800 px-4 py-2 transition-all hover:bg-[#e2e6eb];
+}
+
+.icon {
+  @apply w-5;
+}
+
+.new-chat {
+  @apply flex cursor-pointer text-gray-600  text-[14px] items-center gap-2.5 bg-[#e2e6eb] px-4 py-1 rounded-full mt-4;
+}
+
+.result {
+  @apply h-[70vh] overflow-y-scroll;
+}
+
+.result::-webkit-scrollbar {
+  display: none;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loader hr {
+  border-radius: 4px;
+  border: none;
+  background-color: #f6f8f7;
+  background: linear-gradient(to right, #9ed7ff, #fff, #9ed7ff);
+  background-size: 800px 50px;
+  height: 20px;
+  animation: loader 2s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0px;
+  }
+
+  100% {
+    background-position: 800px 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  .greetings {
+    font-size: 40px;
+  }
+
+  .input-field {
+    max-width: 90%;
+    margin: auto;
+    font-size: 16px;
+  }
+  .result{
+    padding: 24px;
+  }
+
+  .result-data p {
+    font-size: 14px;
+  }
+  .result-data img {
+    height: 34px;
+  }
+  .input-img {
+    height: 20px;
+  }
+}
