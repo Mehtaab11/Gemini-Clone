@@ -17,7 +17,7 @@ const Main = () => {
   // console.log(resultData);
 
   return (
-    <div className="w-full font-outfit min-h-screen flex-1 pb-[15vh] relative ">
+    <div className="w-full font-outfit min-h-screen flex-1 relative ">
       <div className="flex p-6  text-[#585858] justify-between items-center">
         <p className="text-xl font-normal">Gemini</p>
 
@@ -80,7 +80,7 @@ const Main = () => {
         )}
 
         <div className="main-bottom w-full max-w-[900px]">
-          <div className="input-field text-[#585858] mt-5 text-lg bg-[#f0f4f9] p-4 rounded-full flex items-center justify-between">
+          <div className="input-field text-[#585858] mt-2 text-lg bg-[#f0f4f9] p-4 rounded-full flex items-center justify-between">
             <input
               value={input}
               onChange={(e) => {
@@ -106,7 +106,7 @@ const Main = () => {
             </div>
           </div>
 
-          <p className="m-auto mt-4 text-[12px] font-normal text-[#585858] text-center">
+          <p className="m-auto mt-2 text-[12px] font-normal text-[#585858] text-center">
             Gemini may display inaccurate info, including people, So double
             check its responses, Your privacy and Gemini Apps{" "}
           </p>
